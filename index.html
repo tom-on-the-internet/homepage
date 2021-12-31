@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="reset.css" rel="stylesheet" />
         <link href="style.css" rel="stylesheet" />
+        <script defer src="ua-parser.min.js"></script>
         <script defer src="app.js"></script>
     </head>
     <body>
@@ -166,16 +167,36 @@
                     I can speak Korean, a little bit. 한국어를 할 수 있습니까?
                 </p>
             </section>
-            <!-- <section id="about-you"> -->
-            <!--   <h2>About You</h2> -->
-            <!--   <details> -->
-            <!--     <summary>Wait, about me?</summary> -->
+            <section class="hide" id="about-you">
+                <h2>About You</h2>
+                <details>
+                    <summary>Wait, about me?</summary>
 
-            <!--     Imagine I knew about you? -->
-            <!--   </details> -->
-            <!-- </section> -->
+                    <p>You're a smart person. You care.</p>
+                    <p><span id="about-you-os"></span></p>
+                    <p
+                        >You also wonder how I know you are in
+                        <span id="about-you-country"></span>. Maybe a lucky
+                        guess?</p
+                    >
+                    <p
+                        >You squint at your
+                        <span id="about-you-browser"></span> browser and
+                        wonder... is Tom watching me?</p
+                    >
+                    <p
+                        >But don't worry. I don't know who you are and I don't
+                        know you're in <span id="about-you-city"></span>.</p
+                    >
+                    <p
+                        >I am so glad you decided to visit my website. You're
+                        great.</p
+                    >
+                </details>
+            </section>
         </main>
         <footer>
+            <h2>Links</h2>
             <a href="https://blog.tomontheinternet.com">Blog</a>
             <a href="https://github.com/tom-on-the-internet">Github</a>
             <a href="https://www.linkedin.com/in/thomaspatricksteven/"

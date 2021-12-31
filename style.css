@@ -32,11 +32,6 @@ section {
 h1 {
     font-size: 6em;
 }
-@media (max-width: 1000px) {
-    h1 {
-        font-size: 3em;
-    }
-}
 
 h2 {
     color: var(--accent-color);
@@ -77,7 +72,7 @@ details summary:hover {
 details[open] summary {
     color: var(--accent-color);
     text-decoration: none;
-    margin-bottom: 0.5em;
+    margin-bottom: 2em;
 }
 
 details[open] {
@@ -122,4 +117,24 @@ video {
 
 .accent {
     color: var(--accent-color);
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    footer {
+        text-align: left;
+        padding: 0 2em;
+    }
+
+    footer > a {
+        display: block;
+        margin: 20px 0px;
+    }
 }
