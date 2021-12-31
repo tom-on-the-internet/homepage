@@ -9,15 +9,12 @@ async function getUserInformation() {
     }
 
     var parsedResults = new UAParser().getResult()
-    console.log(parsedResults)
 
     userInfo.browser = parsedResults.browser.name
     userInfo.os = osDescription(parsedResults.os.name)
 
     decorateAboutYou(userInfo)
     unhideAboutYou()
-
-    console.log(userInfo)
 }
 
 function businessCard() {
