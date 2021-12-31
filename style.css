@@ -32,6 +32,11 @@ section {
 h1 {
     font-size: 6em;
 }
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 3em;
+    }
+}
 
 h2 {
     color: var(--accent-color);
