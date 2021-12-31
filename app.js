@@ -1,9 +1,20 @@
-console.log(
-    '%ccurl https://business-card.tomontheinternet.com',
+async function getUserInformation() {
+    try {
+        let res = await fetch('https://tomlink.ca/identify')
+        res = await res.json()
+        console.log(res)
+    } catch (err) {
+        console.log(err)
+    }
+}
 
-    'color:green;font-family:monospace; font-size: 20px'
-)
+function businessCard() {
+    console.log(
+        '%ccurl https://business-card.tomontheinternet.com',
 
-// tomlink can be used to get the info you need
-// make an endpoint
-// country, city, that's it.
+        'color:green;font-family:monospace; font-size: 20px'
+    )
+}
+
+getUserInformation()
+businessCard()
