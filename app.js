@@ -25,11 +25,23 @@ function businessCard() {
     )
 }
 
+function glitch() {
+    document.querySelector('body').classList.add('wiggle')
+    document.querySelector('h1').classList.add('glitch')
+    document.querySelector('#about-you h2').classList.add('glitch')
+}
+
 function decorateAboutYou(userInfo) {
     document.querySelector('#about-you-os').textContent = userInfo.os
     document.querySelector('#about-you-browser').textContent = userInfo.browser
     document.querySelector('#about-you-country').textContent = userInfo.country
     document.querySelector('#about-you-city').textContent = userInfo.city
+}
+
+function eventListeners() {
+    document
+        .querySelector('#about-you summary')
+        .addEventListener('click', glitch)
 }
 
 function unhideAboutYou() {
@@ -66,3 +78,4 @@ function osDescription(os) {
 
 getUserInformation()
 businessCard()
+eventListeners()
