@@ -2,7 +2,7 @@ async function getUserInformation() {
     let userInfo = {}
 
     try {
-        let res = await fetch('https://tomlink.ca/identify')
+        let res = await fetch('https://identify.tomontheinternet.com')
         userInfo = await res.json()
     } catch (err) {
         console.log(err)
