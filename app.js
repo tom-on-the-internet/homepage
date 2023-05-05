@@ -39,9 +39,13 @@ function decorateAboutYou(userInfo) {
 }
 
 function eventListeners() {
-    document
-        .querySelector('#about-you summary')
-        .addEventListener('click', glitch)
+    const aboutYou = document.querySelector('#about-you')
+
+    window.addEventListener('scroll', function () {
+        if (aboutYou.offsetTop - window.scrollY <= 200) {
+            glitch()
+        }
+    })
 }
 
 function unhideAboutYou() {
