@@ -3,7 +3,7 @@
 :root {
     --main-bg-color: #1d1f21;
     --accent-color: #2bbc8a;
-    --summary-color: #8a2bbd;
+    --link-color: #aa4bed;
     --main-color: #c9cacc;
     --dim-color: #666666;
     --default-spacing: 0.5em;
@@ -41,9 +41,15 @@ h2 {
     margin-bottom: 1.5em;
 }
 
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
 a {
     cursor: pointer;
-    text-decoration: underline;
+    color: var(--link-color);
+    /* text-decoration: solid underline var(--summary-color); */
 }
 
 p {
@@ -56,34 +62,16 @@ main {
     margin: 0 auto;
 }
 
-summary {
-    cursor: pointer;
-    text-decoration: solid underline var(--summary-color);
-    list-style-type: none;
-}
-
-summary::-webkit-details-marker {
-    display: none; /* Chrome */
-}
-
-details summary:hover {
-}
-
-details[open] summary {
-    margin-bottom: 2em;
-}
-
-details[open] {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
 ol {
     list-style: decimal inside;
 }
 
 li {
     margin-bottom: 0.5em;
+}
+
+#projects li {
+    margin-bottom: 4em;
 }
 
 em {
@@ -107,6 +95,14 @@ video {
     display: block;
     width: 100%;
     height: 400px;
+    margin: 2em 0;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--dim-color);
+    margin: 2em 0;
 }
 
 .dim {
