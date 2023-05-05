@@ -1,3 +1,5 @@
+const aboutYou = document.querySelector('#about-you')
+
 async function getUserInformation() {
     let userInfo = {}
 
@@ -25,7 +27,15 @@ function businessCard() {
     )
 }
 
+function checkGlitch() {
+    if (aboutYou.offsetTop - window.scrollY <= 200) {
+        glitch()
+    }
+}
+
 function glitch() {
+    window.removeEventListener('scroll', checkGlitch)
+
     document.querySelector('body').classList.add('wiggle')
     document.querySelector('h1').classList.add('glitch')
     document.querySelector('#about-you h2').classList.add('glitch')
@@ -39,13 +49,7 @@ function decorateAboutYou(userInfo) {
 }
 
 function eventListeners() {
-    const aboutYou = document.querySelector('#about-you')
-
-    window.addEventListener('scroll', function () {
-        if (aboutYou.offsetTop - window.scrollY <= 200) {
-            glitch()
-        }
-    })
+    window.addEventListener('scroll', checkGlitch)
 }
 
 function unhideAboutYou() {
