@@ -17,18 +17,25 @@ async function getUserInformation() {
 
     decorateAboutYou(userInfo)
     unhideAboutYou()
+    window.addEventListener('scroll', checkGlitch)
 }
 
 function businessCard() {
     console.log(
         '%ccurl https://business-card.tomontheinternet.com',
-
         'color:green;font-family:monospace; font-size: 20px'
     )
 }
 
 function checkGlitch() {
-    if (aboutYou.offsetTop - window.scrollY <= 200) {
+    // scroll over about you
+    const scrollOverAboutYou = aboutYou.offsetTop - window.scrollY <= 150
+
+    // handles being way zoomed out or a HUGH monitor
+    const hitBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight
+
+    if (scrollOverAboutYou || hitBottom) {
         glitch()
     }
 }
@@ -46,10 +53,6 @@ function decorateAboutYou(userInfo) {
     document.querySelector('#about-you-browser').textContent = userInfo.browser
     document.querySelector('#about-you-country').textContent = userInfo.country
     document.querySelector('#about-you-city').textContent = userInfo.city
-}
-
-function eventListeners() {
-    window.addEventListener('scroll', checkGlitch)
 }
 
 function unhideAboutYou() {
@@ -86,4 +89,3 @@ function osDescription(os) {
 
 getUserInformation()
 businessCard()
-eventListeners()
