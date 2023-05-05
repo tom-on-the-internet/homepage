@@ -3,6 +3,7 @@
 :root {
     --main-bg-color: #1d1f21;
     --accent-color: #2bbc8a;
+    --summary-color: #8a2bbd;
     --main-color: #c9cacc;
     --dim-color: #666666;
     --default-spacing: 0.5em;
@@ -57,7 +58,7 @@ main {
 
 summary {
     cursor: pointer;
-    color: var(--dim-color);
+    text-decoration: solid underline var(--summary-color);
     list-style-type: none;
 }
 
@@ -66,12 +67,9 @@ summary::-webkit-details-marker {
 }
 
 details summary:hover {
-    color: var(--accent-color);
 }
 
 details[open] summary {
-    color: var(--accent-color);
-    text-decoration: none;
     margin-bottom: 2em;
 }
 
