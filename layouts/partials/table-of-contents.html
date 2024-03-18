@@ -1,0 +1,8 @@
+{{ if (.Params.display_toc) }}
+<aside class="table-of-contents-wrapper">
+  <details>
+    <summary>table of contents</summary>
+    {{ .TableOfContents }}
+  </details>
+</aside>
+{{ end }}

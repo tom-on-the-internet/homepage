@@ -1,0 +1,32 @@
+<!-- Allow the user to select a color theme -->
+<form action="" class="top-bar">
+  <fieldset>
+    {{ if .IsHome }}
+    <!-- This is the homepage -->
+    {{ else }}
+    <a href="/">/</a>
+    {{ end }}
+    <label for="colorscheme">
+      <span class="light">☀︎</span><span class="dark">☾</span>
+      <input
+        class="visually-hidden"
+        type="checkbox"
+        name="colorscheme"
+        id="colorscheme"
+        checked
+    /></label>
+  </fieldset>
+</form>
+<!-- we have this script run as soon as the color picker is live -->
+<!-- to avoid a flash -->
+{{- with resources.Get "js/color-picker.js" }} {{- if eq hugo.Environment
+"development" }} {{- with . | js.Build }}
+<script src="{{ .RelPermalink }}"></script>
+{{- end }} {{- else }} {{- $opts := dict "minify" true }} {{- with . | js.Build
+$opts | fingerprint }}
+<script
+  src="{{ .RelPermalink }}"
+  integrity="{{- .Data.Integrity }}"
+  crossorigin="anonymous"
+></script>
+{{- end }} {{- end }} {{- end }}

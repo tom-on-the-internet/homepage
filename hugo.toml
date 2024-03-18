@@ -1,0 +1,13 @@
+baseURL = 'https://tomontheinternet.com/'
+languageCode = 'en-us'
+title = 'Tom on the Internet'
+  [markup.highlight]
+    noclasses = false
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
+  [markup.goldmark.renderer]
+      unsafe = true
+  [security]
+     enableInlineShortcodes = true

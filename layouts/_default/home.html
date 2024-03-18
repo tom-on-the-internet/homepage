@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="home">
+  <h1>{{ .Title }}</h1>
+
+  <div class="home-logo">{{ partial "logo.html" . }}</div>
+  <p class="greeting">
+    <code>
+      <span>2</span><span>0</span><span>0 </span><span>O</span
+      ><span>K</span></code
+    >
+  </p>
+
+  <ul class="pages">
+    <li>
+      <a href="/about">About</a>
+    </li>
+    <li>
+      <a href="projects">Side Projects</a>
+    </li>
+    <li>
+      <a href="great-things">Great Things</a>
+    </li>
+  </ul>
+
+  <h2>Blog</h2>
+  <ul class="blog-list">
+    {{ range (.Paginate .Site.RegularPages).Pages }} {{ if .Date }}
+    <li>
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }} {{
+      $dateHuman := .Date | time.Format ":date_medium" }}
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    </li>
+    {{ end }} {{ end }}
+  </ul>
+</div>
+<footer>{{ partial "footer.html" . }}</footer>
+{{ end }}
