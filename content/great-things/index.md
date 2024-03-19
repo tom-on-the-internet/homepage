@@ -12,6 +12,12 @@ When I find great things, I put them here.
 
 This has made Neovim a pleasure to configure.
 
+### [mycli](https://www.mycli.net/)
+
+> MyCLI is a command line interface for MySQL, MariaDB, and Percona with auto-completion and syntax highlighting.
+
+I haven't found a better way of working with MySQL than mycli. It's a fast, keyboard-driven TUI that allows me to get things done. I love that I can easily find my previous queries, jump in to Neovim, have syntax highlighting, etc. It makes me better, at least a little, at SQL, too.
+
 ## Podcast Episodes
 
 ### [Managers should know how to code ft. Thorsten Ball | Backend Banter 044](https://www.youtube.com/watch?v=ruW9wtH2AZs)
