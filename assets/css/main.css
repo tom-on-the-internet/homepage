@@ -159,6 +159,10 @@ ul {
   list-style-position: inside;
 }
 
+ul ul {
+  margin-left: 1rem;
+}
+
 article {
   max-width: var(--max-width);
 
